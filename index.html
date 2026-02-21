@@ -1195,7 +1195,8 @@
     wrapper.appendChild(card);
     messagesEl.appendChild(wrapper);
     scrollToBottom();
-    textInput.focus();
+    // Only auto-focus on desktop to avoid opening keyboard on mobile
+    if (window.innerWidth > 620) textInput.focus();
   }
 
   // ── Handle response (shared by send, greet, tool click) ────────
