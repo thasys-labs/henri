@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 200" width="320" height="400">
+  <rect width="160" height="200" fill="#120e08"/>
+  <path d="M5,200 L28,150 Q55,136 80,138 Q105,136 132,150 L155,200 Z" fill="#1a1614" stroke="#0a0806" stroke-width="2"/>
+  <path d="M28,150 L52,136 L72,148 L80,138" fill="#211d19" stroke="#0a0806" stroke-width="1.5"/>
+  <path d="M132,150 L108,136 L88,148 L80,138" fill="#211d19" stroke="#0a0806" stroke-width="1.5"/>
+  <path d="M70,134 L80,154 L90,134 L86,124 L74,124 Z" fill="#f0ebe3" stroke="#0a0806" stroke-width="1.5"/>
+  <rect x="68" y="118" width="24" height="18" rx="4" fill="#f0c890" stroke="#0a0806" stroke-width="1.5"/>
+  <ellipse cx="34" cy="80" rx="7" ry="10" fill="#f0c890" stroke="#0a0806" stroke-width="2"/>
+  <path d="M30,73 Q32,80 30,87" fill="none" stroke="#d4a070" stroke-width="1"/>
+  <ellipse cx="126" cy="80" rx="7" ry="10" fill="#f0c890" stroke="#0a0806" stroke-width="2"/>
+  <path d="M122,73 Q124,80 122,87" fill="none" stroke="#d4a070" stroke-width="1"/>
+  <ellipse cx="80" cy="76" rx="52" ry="58" fill="#f0c890" stroke="#0a0806" stroke-width="2.5"/>
+  <path d="M28,60 Q30,22 80,18 Q130,22 132,60 Q122,30 80,33 Q46,33 36,52 Q32,56 28,60 Z" fill="#1e1208" stroke="#0a0806" stroke-width="1.5"/>
+  <path d="M64,25 Q68,19 76,17" fill="none" stroke="#2e1c10" stroke-width="1.5"/>
+  <path d="M52,53 Q62,47 72,51" fill="none" stroke="#1e1208" stroke-width="3" stroke-linecap="round"/>
+  <path d="M88,46 Q99,40 111,45" fill="none" stroke="#1e1208" stroke-width="3" stroke-linecap="round"/>
+  <ellipse cx="63" cy="66" rx="9" ry="8" fill="#fafaf8" stroke="#0a0806" stroke-width="1.5"/>
+  <circle cx="64" cy="67" r="4.5" fill="#1e1208"/>
+  <circle cx="66" cy="65" r="1.5" fill="white"/>
+  <ellipse cx="63" cy="66" rx="13" ry="12" fill="none" stroke="#d4a843" stroke-width="2"/>
+  <path d="M55,58 Q58,56 62,57" fill="none" stroke="rgba(255,255,255,0.45)" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M74,76 Q78,86 75,100 Q73,108 71,114" fill="none" stroke="#d4a843" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <ellipse cx="97" cy="66" rx="9" ry="8" fill="#fafaf8" stroke="#0a0806" stroke-width="1.5"/>
+  <circle cx="96" cy="67" r="4.5" fill="#1e1208"/>
+  <circle cx="99" cy="65" r="1.5" fill="white"/>
+  <path d="M77,78 Q74,85 76,90 Q80,93 84,90 Q86,85 83,78" fill="none" stroke="#c89060" stroke-width="2" stroke-linecap="round"/>
+  <path d="M76,90 Q78,92 80,91 Q82,92 84,90" fill="none" stroke="#b88050" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M68,97 Q74,93 80,96" fill="none" stroke="#1e1208" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M80,96 Q86,93 92,97" fill="none" stroke="#1e1208" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M67,97 Q64,94 66,91" fill="none" stroke="#1e1208" stroke-width="2" stroke-linecap="round"/>
+  <path d="M93,97 Q96,94 94,91" fill="none" stroke="#1e1208" stroke-width="2" stroke-linecap="round"/>
+  <path d="M72,106 Q80,112 91,107 Q93,105 94,108" fill="none" stroke="#0a0806" stroke-width="2" stroke-linecap="round"/>
+  <path d="M58,128 L74,122 L80,128 L74,134 Z" fill="#d4a843" stroke="#0a0806" stroke-width="1.5"/>
+  <path d="M102,128 L86,122 L80,128 L86,134 Z" fill="#d4a843" stroke="#0a0806" stroke-width="1.5"/>
+  <ellipse cx="80" cy="128" rx="5" ry="5" fill="#a07828" stroke="#0a0806" stroke-width="1.5"/>
+  <path d="M132,150 Q140,168 142,185" stroke="#1a1614" stroke-width="8" stroke-linecap="round" fill="none"/>
+  <ellipse cx="140" cy="188" rx="11" ry="8" fill="#f0c890" stroke="#0a0806" stroke-width="1.5"/>
+  <path d="M122,155 L119,192 L142,192 L139,155 Z" fill="rgba(200,155,40,0.22)" stroke="#0a0806" stroke-width="1.5"/>
+  <path d="M123,163 L120,190 L141,190 L138,163 Z" fill="rgba(185,135,25,0.45)"/>
+  <path d="M122,156 Q125,149 128,153 Q130,147 133,151 Q135,146 138,150 Q140,146 142,151 L139,156 Z" fill="white" stroke="#0a0806" stroke-width="1.5"/>
+  <path d="M139,163 Q150,163 150,172 Q150,181 139,181" fill="none" stroke="#0a0806" stroke-width="2"/>
+  <path d="M124,160 L123,189" fill="none" stroke="rgba(255,255,255,0.28)" stroke-width="1.5"/>
+</svg>

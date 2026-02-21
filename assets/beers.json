@@ -1,0 +1,122 @@
+{
+  "Brauherren Pils": {
+    "style": "Pilsner",
+    "note": "Zeigt sich in brillantem Strohgold mit feiner, standhafter Schaumkrone. Am Gaumen eine edle Hopfenbittere, die sich elegant mit einer dezenten Malzsüße verwebt – ein Bier von distinguierter Klarheit.",
+    "pairing": "Bratwurst vom Grill, würziger Käse",
+    "image": "/assets/beers/brauherren-pils.png"
+  },
+  "Pilsener": {
+    "style": "Pilsner",
+    "note": "Ein klassisches Pilsener von nobler Zurückhaltung. Kristallklar mit goldenen Reflexen, offenbart es eine harmonische Balance zwischen frischer Hopfennote und sanfter Malzigkeit.",
+    "pairing": "Fischgerichte, leichte Salate",
+    "image": "/assets/beers/pilsener.png"
+  },
+  "Brauherren Alkoholfrei": {
+    "style": "Alkoholfreies Pilsner",
+    "note": "Beweist eindrucksvoll, dass auch ohne Alkohol höchste Braukunst möglich ist. Frisch, herb und vollmundig – ein wahrhaft satisfaktionsfähiges alkoholfreies Bier.",
+    "pairing": "Mittagessen, sportliche Aktivitäten",
+    "image": "/assets/beers/brauherren-alkoholfrei.png"
+  },
+  "Lager AF 0,0": {
+    "style": "Alkoholfreies Lager",
+    "note": "Ein vollkommen alkoholfreies Lager von überraschender Tiefe. Mild, süffig und mit einem Hauch von Getreide im Abgang – Genuss ohne Reue.",
+    "pairing": "Leichte Küche, Grillabende",
+    "image": "/assets/beers/lager-af.png"
+  },
+  "Radler AF 0,0": {
+    "style": "Alkoholfreies Radler",
+    "note": "Die perfekte Erfrischung für den bewussten Genießer. Spritzige Zitrusnoten tanzen auf einer malzigen Basis – sommerlich, leicht und absolut nüchtern.",
+    "pairing": "Sonnige Terrasse, Sport",
+    "image": "/assets/beers/radler-af.png"
+  },
+  "Null Bock": {
+    "style": "Alkoholfreies Bockbier",
+    "note": "Ein alkoholfreier Bock – welch kühne Innovation! Vollmundig, malzbetont und mit der Würde eines traditionellen Bockbieres, jedoch ohne die berauschende Konsequenz.",
+    "pairing": "Deftige Hausmannskost",
+    "image": "/assets/beers/null-bock.png"
+  },
+  "Radler Naturtrüb": {
+    "style": "Naturtrübes Radler",
+    "note": "Naturtrüb schimmert es im Glas wie ein niedersächsischer Sommermorgen. Die naturbelassene Hefe verleiht diesem Radler eine charmante Komplexität und samtige Textur.",
+    "pairing": "Biergarten, leichte Snacks",
+    "image": "/assets/beers/radler-naturtrueb.png"
+  },
+  "Blutorange": {
+    "style": "Biermischgetränk",
+    "note": "Eine kühne Liaison von Einbecker Braukunst und sizilianischer Blutorange. Fruchtig-herb mit einem Hauch mediterraner Dekadenz – erfrischend unkonventionell.",
+    "pairing": "Sommerabende, leichte Desserts",
+    "image": "/assets/beers/blutorange.png"
+  },
+  "Lager": {
+    "style": "Lager",
+    "note": "Das Fundament der Einbecker Brautradition. Goldgelb und vollmundig, mit einer ausgewogenen Malznote und sanftem Hopfenfinish – zeitlose Eleganz im Glas.",
+    "pairing": "Schnitzel, Braten, Aufschnitt",
+    "image": "/assets/beers/lager.png"
+  },
+  "Helles": {
+    "style": "Helles Lager",
+    "note": "Leuchtend wie ein Sonnenstrahl über dem Solling. Mild gehopft, sanft malzig und von einer Süffigkeit, die zum Verweilen einlädt. Ein Bier von heiterer Gelassenheit.",
+    "pairing": "Weißwurst, Brezn, Obazda",
+    "image": "/assets/beers/helles.png"
+  },
+  "Dunkel": {
+    "style": "Dunkles Lager",
+    "note": "Tiefes Mahagoni mit rubinroten Reflexen. Am Gaumen entfalten sich Aromen von Karamell, geröstetem Brot und einem Hauch dunkler Schokolade – kontemplativ und wärmend.",
+    "pairing": "Wildgerichte, dunkle Soßen",
+    "image": "/assets/beers/dunkel.png"
+  },
+  "Landbier": {
+    "style": "Landbier",
+    "note": "Rustikale Eleganz aus niedersächsischen Landen. Naturtrüb und charaktervoll, mit einer erdigen Malznote und dem ehrlichen Geschmack traditioneller Braukunst.",
+    "pairing": "Deftige Landküche, Käseplatte",
+    "image": "/assets/beers/landbier.png"
+  },
+  "Ur-Bock Hell": {
+    "style": "Heller Bock",
+    "note": "Das Flaggschiff des Hauses! Strahlend golden mit einer majestätischen Malzsüße, die von einer noblen Hopfenbittere in Schach gehalten wird. Ein Meisterwerk seit 1378.",
+    "pairing": "Festbraten, Nussgebäck",
+    "image": "/assets/beers/ur-bock-hell.png"
+  },
+  "Ur-Bock Dunkel": {
+    "style": "Dunkler Bock",
+    "note": "Der dunkle Bruder des legendären Ur-Bocks. Tiefschwarz mit Aromen von Dörrpflaume, Mokka und Karamell – ein Bier für besinnliche Stunden am Kaminfeuer.",
+    "pairing": "Sauerbraten, dunkle Schokolade",
+    "image": "/assets/beers/ur-bock-dunkel.png"
+  },
+  "Weizen-Bock": {
+    "style": "Weizenbock",
+    "note": "Eine opulente Vermählung von bayerischer Weizentradition und Einbecker Bockbier-Expertise. Fruchtig-würzig mit Noten von Banane und Nelke – üppig und verführerisch.",
+    "pairing": "Süßspeisen, Käsekuchen",
+    "image": "/assets/beers/weizen-bock.png"
+  },
+  "Winter-Bock": {
+    "style": "Saisonaler Bock",
+    "note": "Ein wärmendes Elixier für kalte Winternächte. Vollmundig, malzbetont und mit einem Hauch von Gewürzen – wie eine flüssige Umarmung vor dem Kamin.",
+    "pairing": "Weihnachtsbraten, Lebkuchen",
+    "image": "/assets/beers/winter-bock.png"
+  },
+  "Mai-Ur-Bock": {
+    "style": "Maibock",
+    "note": "Der frühlingshafte Gruß aus Einbeck! Strahlend gold mit einer lebhaften Hopfennote, die den Winterschlaf beendet und die Sinne erweckt. Frisch, kräftig, optimistisch.",
+    "pairing": "Spargel, Frühlingsgemüse",
+    "image": "/assets/beers/mai-ur-bock.png"
+  },
+  "Barrel Bock": {
+    "style": "Fassgelagerter Bock",
+    "note": "In edlen Eichenfässern zur Vollendung gereift. Komplexe Aromen von Vanille, Karamell und einem Hauch Eichenholz verschmelzen mit der kräftigen Bockbier-Basis – eine Rarität für Kenner.",
+    "pairing": "Aged Cheese, Zigarre",
+    "image": "/assets/beers/barrel-bock.png"
+  },
+  "Weihnachtsbier": {
+    "style": "Festbier",
+    "note": "Die flüssige Essenz der Weihnachtszeit. Festlich-würzig mit Anklängen von Zimt und Sternanis, eingebettet in eine samtweiche Malzbasis – Besinnlichkeit im Glas.",
+    "pairing": "Weihnachtsgans, Stollen",
+    "image": "/assets/beers/weihnachtsbier.png"
+  },
+  "Einhundert": {
+    "style": "Jubiläumsbier",
+    "note": "Ein Jahrhundertbier von erlesener Qualität. Kraftvoll, komplex und mit der Würde eines Jubiläums gebraut – ein Monument Einbecker Braukunst.",
+    "pairing": "Festliche Anlässe, edle Speisen",
+    "image": "/assets/beers/einhundert.png"
+  }
+}
