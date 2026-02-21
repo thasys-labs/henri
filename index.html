@@ -342,8 +342,8 @@
       .sidebar {
         width: 100%;
         flex-direction: row;
-        padding: 10px 16px;
-        gap: 12px;
+        padding: 8px 12px;
+        gap: 10px;
         border-right: none;
         border-bottom: 1px solid var(--border);
       }
@@ -351,20 +351,92 @@
       .sidebar::before { display: none; }
 
       .sidebar-portrait {
-        width: 42px;
-        height: 52px;
+        width: 36px;
+        height: 44px;
         margin-bottom: 0;
         border-radius: 6px;
       }
 
-      .sidebar-info { align-items: flex-start; }
+      .sidebar-info { align-items: flex-start; flex: 1; }
       .sidebar-sep, .sidebar-year { display: none; }
-      .sidebar-name { font-size: 0.88rem; text-align: left; }
-      .sidebar-title { text-align: left; }
-      .sidebar-badge { margin-top: 0; }
+      .sidebar-name { font-size: 0.82rem; text-align: left; }
+      .sidebar-title { text-align: left; font-size: 0.6rem; }
+      .sidebar-badge { display: none; }
 
-      /* Hide beer panel on mobile */
-      .beer-panel { display: none; }
+      /* Compact theme toggle on mobile */
+      .theme-toggle {
+        margin-top: 0;
+        padding: 4px;
+        gap: 4px;
+      }
+      .theme-btn {
+        width: 24px;
+        height: 24px;
+        font-size: 0.75rem;
+      }
+      .theme-btn svg {
+        width: 12px;
+        height: 12px;
+      }
+
+      /* Beer panel as slide-up overlay on mobile */
+      .beer-panel {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: auto;
+        width: 100%;
+        max-height: 70vh;
+        border-radius: 20px 20px 0 0;
+        border: none;
+        border-top: 1px solid var(--border);
+        transform: translateY(100%);
+        transition: transform 0.35s cubic-bezier(0.34, 1.2, 0.64, 1);
+        z-index: 100;
+        box-shadow: 0 -10px 40px rgba(0,0,0,0.4);
+      }
+
+      .beer-panel.visible {
+        transform: translateY(0);
+      }
+
+      .beer-img-box {
+        height: 160px;
+      }
+
+      .beer-img-box img {
+        max-height: 140px;
+      }
+
+      /* Close button for mobile beer panel */
+      .beer-close {
+        display: flex;
+      }
+    }
+
+    /* Hide close button on desktop */
+    .beer-close {
+      display: none;
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--subtle);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+    }
+
+    .beer-close:hover {
+      color: var(--text);
+      background: var(--border);
     }
 
     /* ── MESSAGES ── */
@@ -759,6 +831,9 @@
   </div><!-- .chat-area -->
 
   <aside class="beer-panel" id="beer-panel">
+    <button class="beer-close" id="beer-close" aria-label="Schließen">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
     <div class="beer-panel-inner">
       <div class="beer-img-box">
         <img id="beer-img" src="" alt="Bier" />
@@ -805,6 +880,11 @@
 
   themeButtons.forEach(btn => {
     btn.addEventListener('click', () => setTheme(btn.dataset.theme));
+  });
+
+  // ── Beer panel close button ────────────────────────────────────
+  document.getElementById('beer-close').addEventListener('click', () => {
+    document.getElementById('beer-panel').classList.remove('visible');
   });
 
   const messagesEl = document.getElementById('messages');
