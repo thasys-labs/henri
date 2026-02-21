@@ -434,9 +434,9 @@
         max-height: 160px;
       }
 
-      /* Close button for mobile beer panel */
+      /* Close button visible on mobile */
       .beer-close {
-        display: flex;
+        display: flex !important;
       }
     }
 
@@ -445,28 +445,29 @@
       display: none;
     }
 
-    /* Hide close button on desktop */
+    /* Close button - hidden on desktop, shown on mobile via media query */
     .beer-close {
       display: none;
       position: absolute;
       top: 10px;
       right: 10px;
-      width: 36px;
-      height: 36px;
+      width: 40px;
+      height: 40px;
       border-radius: 50%;
-      background: var(--bg2);
-      border: 1px solid var(--border);
-      color: var(--text);
+      background: var(--bg);
+      border: 2px solid var(--gold-mute);
+      color: var(--gold);
       cursor: pointer;
       align-items: center;
       justify-content: center;
       z-index: 10;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
     }
 
-    .beer-close:hover {
-      color: var(--gold);
-      background: var(--bg);
+    .beer-close:hover, .beer-close:active {
+      color: var(--text);
+      background: var(--gold);
+      border-color: var(--gold);
     }
 
     /* ── MESSAGES ── */
