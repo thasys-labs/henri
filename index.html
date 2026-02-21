@@ -1227,7 +1227,8 @@
     } finally {
       isLoading = false;
       sendBtn.disabled = false;
-      inputEl.focus();
+      // Only auto-focus on desktop to avoid opening keyboard on mobile
+      if (window.innerWidth > 620) inputEl.focus();
     }
   }
 
@@ -1293,7 +1294,8 @@
     } finally {
       isLoading = false;
       sendBtn.disabled = false;
-      inputEl.focus();
+      // Only auto-focus on desktop to avoid opening keyboard on mobile
+      if (window.innerWidth > 620) inputEl.focus();
     }
   }
 
