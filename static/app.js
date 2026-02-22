@@ -69,6 +69,8 @@ function findBeer(name) {
 const conversationHistory = [];
 const displayMessages = [];
 let isLoading = false;
+let pendingMultipleChoiceToolId = null;
+let pendingMultipleChoiceCard = null;
 
 // ── Session persistence (sessionStorage – cleared when tab closes) ──
 const SESSION_KEY = 'henri-session';
@@ -281,6 +283,8 @@ function renderMultipleChoice(question, options, toolId) {
       displayMessages.push({ role: 'user', text: option });
 
       // Add tool_result to history
+      pendingMultipleChoiceToolId = null;
+      pendingMultipleChoiceCard = null;
       conversationHistory.push({
         role: 'user',
         content: [{ type: 'tool_result', tool_use_id: toolId, content: option }],
@@ -297,58 +301,13 @@ function renderMultipleChoice(question, options, toolId) {
 
   card.appendChild(opts);
 
-  // ── "oder" + free-text input ──
-  const divider = document.createElement('div');
-  divider.className = 'mc-divider';
-  divider.textContent = 'oder';
-  card.appendChild(divider);
-
-  const textRow = document.createElement('div');
-  textRow.className = 'mc-text-row';
-
-  const textInput = document.createElement('input');
-  textInput.type = 'text';
-  textInput.className = 'mc-text-input';
-  textInput.placeholder = 'Eigene Antwort...';
-
-  const textBtn = document.createElement('button');
-  textBtn.className = 'mc-text-btn';
-  textBtn.title = 'Absenden';
-  textBtn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>';
-
-  function submitCustom() {
-    const val = textInput.value.trim();
-    if (!val || isLoading) return;
-    card.querySelectorAll('.mc-btn').forEach(b => { b.disabled = true; });
-    textInput.disabled = true;
-    textBtn.disabled = true;
-    addMessage('user', val);
-    displayMessages.push({ role: 'user', text: val });
-    conversationHistory.push({
-      role: 'user',
-      content: [{ type: 'tool_result', tool_use_id: toolId, content: val }],
-    });
-    isLoading = true;
-    sendBtn.disabled = true;
-    addTypingIndicator();
-    handleResponse();
-  }
-
-  textBtn.addEventListener('click', submitCustom);
-  textInput.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter') { e.preventDefault(); submitCustom(); }
-  });
-
-  textRow.appendChild(textInput);
-  textRow.appendChild(textBtn);
-  card.appendChild(textRow);
-
   wrapper.appendChild(av);
   wrapper.appendChild(card);
   messagesEl.appendChild(wrapper);
   scrollToBottom();
   // Only auto-focus on desktop to avoid opening keyboard on mobile
-  if (window.innerWidth > 620) textInput.focus();
+  if (window.innerWidth > 620) inputEl.focus();
+  return card;
 }
 
 // ── Handle response (shared by send, greet, tool click) ────────
@@ -377,7 +336,8 @@ async function handleResponse() {
     } else if (toolUse?.name === 'multiple_choice') {
       // If no streamed text preceded the widget, store the question so it's readable on restore
       if (!text) displayMessages.push({ role: 'assistant', text: toolUse.input.question });
-      renderMultipleChoice(toolUse.input.question, toolUse.input.options, toolUse.id);
+      pendingMultipleChoiceToolId = toolUse.id;
+      pendingMultipleChoiceCard = renderMultipleChoice(toolUse.input.question, toolUse.input.options, toolUse.id);
       saveSession();
     } else {
       saveSession();
@@ -409,7 +369,15 @@ async function send() {
   inputEl.style.height = 'auto';
   addMessage('user', text);
   displayMessages.push({ role: 'user', text });
-  conversationHistory.push({ role: 'user', content: text });
+  if (pendingMultipleChoiceToolId) {
+    const toolId = pendingMultipleChoiceToolId;
+    pendingMultipleChoiceToolId = null;
+    pendingMultipleChoiceCard?.querySelectorAll('.mc-btn').forEach(b => { b.disabled = true; });
+    pendingMultipleChoiceCard = null;
+    conversationHistory.push({ role: 'user', content: [{ type: 'tool_result', tool_use_id: toolId, content: text }] });
+  } else {
+    conversationHistory.push({ role: 'user', content: text });
+  }
   addTypingIndicator();
   await handleResponse();
 }
